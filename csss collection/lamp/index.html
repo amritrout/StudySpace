@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lava-lamp</title>
+    <link rel="stylesheet" href="lamp.css">
+</head>
+<body>
+
+  <div class="scene">
+    <div class="lava-lamp" style="--height: 400; --width: 150">
+      <div class="lava-lamp__main">
+        <div class="lava-lamp__glass">
+            <div class="lava-lamp__lava">
+              <svg>
+                <ellipse class="blob blob--top" cx="35" cy="0" rx="35" ry="10"></ellipse>
+                <ellipse class="blob blob--bottom" cx="75" cy="270" rx="75" ry="10"></ellipse>
+                <circle class="blob" r="26.5" cx="93" cy="400" style="--skewX: -5; --skewY: -2; --height: 53; --speed: 34; --delay: -6; --direction: alternate;"></circle>
+                <circle class="blob" r="23.5" cx="115" cy="400" style="--skewX: 1; --skewY: -4; --height: 47; --speed: 26; --delay: -2; --direction: alternate;"></circle>
+                <circle class="blob" r="38.5" cx="139" cy="400" style="--skewX: 0; --skewY: 5; --height: 77; --speed: 10; --delay: -9; --direction: alternate-reverse;"></circle>
+              </svg>
+            </div>
+            <div class="lava-lamp__lava">
+              <svg>
+                <ellipse class="blob blob--top" cx="35" cy="0" rx="35" ry="10"></ellipse>
+                <ellipse class="blob blob--bottom" cx="75" cy="270" rx="75" ry="10"></ellipse>
+                <circle class="blob" r="21.5" cx="140" cy="400" style="--skewX: 4; --skewY: -4; --height: 43; --speed: 48; --delay: -9; --direction: alternate;"></circle>
+                <circle class="blob" r="27.5" cx="50" cy="400" style="--skewX: 5; --skewY: 5; --height: 55; --speed: 9; --delay: -2; --direction: alternate;"></circle>
+                <circle class="blob" r="28.5" cx="105" cy="400" style="--skewX: -5; --skewY: 1; --height: 57; --speed: 46; --delay: -2; --direction: alternate;"></circle>
+                <circle class="blob" r="20.5" cx="33" cy="400" style="--skewX: 4; --skewY: -3; --height: 41; --speed: 39; --delay: -2; --direction: alternate-reverse;"></circle>
+              </svg>
+            </div>
+            <div class="lava-lamp__lava">
+              <svg>
+                <ellipse class="blob blob--top" cx="35" cy="0" rx="35" ry="10"></ellipse>
+                <ellipse class="blob blob--bottom" cx="75" cy="270" rx="75" ry="10"></ellipse>
+                <circle class="blob" r="20.5" cx="80" cy="400" style="--skewX: -4; --skewY: -2; --height: 41; --speed: 11; --delay: -1; --direction: alternate;"></circle>
+                <circle class="blob" r="29" cx="109" cy="400" style="--skewX: -2; --skewY: -3; --height: 58; --speed: 32; --delay: -2; --direction: alternate-reverse;"></circle>
+              </svg>
+            </div>
+            <div class="lava-lamp__lava">
+              <svg>
+                <ellipse class="blob blob--top" cx="35" cy="0" rx="35" ry="10"></ellipse>
+                <ellipse class="blob blob--bottom" cx="75" cy="270" rx="75" ry="10"></ellipse>
+                <circle class="blob" r="19.5" cx="136" cy="400" style="--skewX: 1; --skewY: 1; --height: 39; --speed: 23; --delay: -8; --direction: alternate;"></circle>
+              </svg>
+            </div>
+        </div>
+      </div>
+      <div class="lava-lamp__base"></div>
+    </div>
+    <svg style="position: absolute; left: 100%">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="BLUR"></feGaussianBlur>
+          <feColorMatrix in="BLUR" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="GOO"></feColorMatrix>
+          <feBlend in="SourceGraphic" in2="goo"></feBlend>
+        </filter>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="iframe-container">
+    <div id="player"></div>
+  </div>
+  <script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+  
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        width: '100%',
+        videoId: 'jfKfPfyJRdk',
+        playerVars: { 'autoplay': 1, 'playsinline': 1, 'rel': 0, 'loop': 1, 'autopause': 0, 'mute': 0 },
+        events: {
+          'onReady': onPlayerReady,
+  'onStateChange':onPlayerStateChange
+        }
+      });
+    }
+  
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+     event.target.unmute();
+      event.target.playVideo();
+    }
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.ENDED) {
+        player.seekTo(0);
+        player.playVideo();
+      }
+    }
+  </script>
+  
+  <style>
+    .iframe-container{
+      position: relative;
+      width: 0%;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+    .iframe-container iframe{
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 0%;
+      height: 0%;
+    }
+  </style>
+</body>
+</html>
