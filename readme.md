@@ -15,7 +15,7 @@
 First, clone the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/Sreenivasan2002/StudySpace.git
+git clone https://github.com/amritrout/StudySpace.git
 ```
 
 ### 2. Navigate to the Project Directory
