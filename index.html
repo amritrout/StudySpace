@@ -1,192 +1,181 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="index_bg.css">
-
-    <title>studyspace</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
+  <link rel="stylesheet" href="https://api.fontshare.com/css?f[]=satoshi@1,300,301,700&f[]=clash-grotesk@1,200,201,600&f[]=quicksand@1,500,600,700&display=swap">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>StudySpace</title>
 </head>
-<body >
-    <style>
-        body {
-            background: rgb(189,195,199);
-            background: radial-gradient(circle, rgba(189,195,199,1) 0%, rgba(44,62,80,1) 100%);
-        }
-        </style>
-        <div class="wrapper">
+<body>
+  <main data-scroll-container class="content" id="top">
+
+    <div class="top-bar">        
+      <div>
+        <a class="go" href="#top">360°</a>
+      </div>
+
+      <div id="dark-mode-toggle" class="toggle-button-cover">
+        <div class="button r" id="toggle-button">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs"></div>
+          <div class="layer"></div>
         </div>
-<!-- header-->
-<header>
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-red p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span class="ml-3 text-xl">StudySpace</span>
-          </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            
-          </nav>
-          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><a href = "mailto:fallenjha@gmail.com">contact Alex</a>
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
-        </div>
-      </header>
-</header>
-<!--DESIGN-->
-    <div class="animation-wrapper">
-    <div class="stagger-visualizer">
-      <div class="cursor color-red"></div>
-      <div class="dots-wrapper"></div>
+      </div>
     </div>
+
+    <div class="header" data-scroll-section>
+      <header><h1>Study Space</h1></header>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#home" data-scroll>Home</a></li>
+          <li><a href="#about" data-scroll>About</a></li>
+          <li><a href="#case-studies" data-scroll>Case Studies</a></li>
+          <li><a href="#team" data-scroll>Team</a></li>
+          <li><a href="#contact" data-scroll>Contact</a></li>
+        </ul>
+      </nav>
     </div>
+
+    <section id="home" class="main-section" data-scroll-section>
+      <h2 class="title-section" data-scroll data-scroll-speed="1">Welcome to Study Space</h2>
+      <p class="subtitle-section" data-scroll data-scroll-speed="2">We create space where you study and complete your to-do's</p>
     
-<!--part-1 {introduction}-->
+      <div class="swiper-container slider-column" style="width: 100%; height: 600px;">
+        <div class="swiper swiper-slider" style="height: 100%;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+              <h1 class="slide-title"></h1>
+              <img src="img/1.jpg" alt="Swiper" style="width: 100%; height: auto; object-fit: cover;">
+            </div>
+            <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+              <h1 class="slide-title"></h1>
+              <img src="img/2.jpg" alt="Swiper" style="width: 100%; height: auto; object-fit: cover;">
+            </div>
+            <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+              <h1 class="slide-title"></h1>
+              <img src="img/3.jpg" alt="Swiper" style="width: 100%; height: auto; object-fit: cover;">
+            </div>
+            <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+              <h1 class="slide-title"></h1>
+              <img src="img/4.jpg" alt="Swiper" style="width: 100%; height: auto; object-fit: cover;">
+            </div>
+            <div class="swiper-slide" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+              <h1 class="slide-title"></h1>
+              <img src="img/5.jpg" alt="Swiper" style="width: 100%; height: auto; object-fit: cover;">
+            </div>
+          </div>
+          <span class="progressbar"></span>
+        </div>
+      </div>
+    </section>
+    
+    <div style="height: 100px;"></div>
 
-<!--part 2-->
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto flex flex-wrap">
-   
-    <div class="flex flex-wrap md:-m-2 -m-1">
-      <div class="flex flex-wrap w-1/2">
-        <div class="md:p-2 p-1 w-1/2">
-            <a href="csss collection\cloud\index.html">
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://i.pinimg.com/originals/f4/ed/f0/f4edf0b12185f46a1a7214f308914126.jpg">
-            </a>
-        </div>
-        <div class="md:p-2 p-1 w-1/2">
-            <a href="csss collection\bowl\index.html"> 
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://i.pinimg.com/564x/86/23/0e/86230e5e139623dbf487952d3e4e6cf2.jpg">
-           </a>
-        </div>
-        <div class="md:p-2 p-1 w-full">
-            <a href="csss collection\lamp\index.html"> 
-          <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://i.pinimg.com/564x/c5/f3/32/c5f332ba0778043b2e4b33d5fe474c49.jpg">
-             </a>
-        </div>
-      </div>
-      <div class="flex flex-wrap w-1/2">
-        <div class="md:p-2 p-1 w-full">
-            <a href="csss collection\rain\index.html"> 
-          <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://i.pinimg.com/564x/5c/ee/9e/5cee9e3e736e0d8f2d0498eb4eab642c.jpg">
-         </a>
-        </div>
-        <div class="md:p-2 p-1 w-1/2">
-            <a href="csss collection\milk\index.html"> 
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://i.pinimg.com/564x/d5/48/49/d54849076054b30c49792b1f76ab4898.jpg">
-             </a>
-        </div>
-        <div class="md:p-2 p-1 w-1/2">
-            <a href="csss collection\physics\index.html">  
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://i.pinimg.com/564x/3c/ea/d8/3cead825515bfd1d7dc5a40b6e46a0c9.jpg">
-            </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-    <div class="container px-5 py-24 mx-auto flex flex-wrap">
-      <div class="flex w-full mb-20 flex-wrap">
-       
-      </div>
-      <div class="flex flex-wrap md:-m-2 -m-1">
-        <div class="flex flex-wrap w-1/2">
-          <div class="md:p-2 p-1 w-1/2">
-            <a href="csss collection\dot\index.html">  
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://i.pinimg.com/564x/59/19/e2/5919e2028f3025590620fcae30131d02.jpg">
-            </a>
-        </div>
-          <div class="md:p-2 p-1 w-1/2">
-            <a href="csss collection\glass\index.html"> 
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://i.pinimg.com/564x/fa/36/1f/fa361f35d5799e49c642628d6f684def.jpg">
-            </a>
-        </div>
-          <div class="md:p-2 p-1 w-full">
-            <a href="csss collection\cat\index.html"> 
-            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://i.pinimg.com/564x/7d/1e/89/7d1e89c2119cf611c80b23e33b8e65b0.jpg">
-            </a>
-        </div>
-        </div>
-        <div class="flex flex-wrap w-1/2">
-          <div class="md:p-2 p-1 w-full">
-            <a href="csss collection\failling star\index.html"> 
-            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://i.pinimg.com/564x/c3/c9/81/c3c9814cb6b6f3b21f3f621665eec069.jpg">
-         </a>
-        </div>
-          <div class="md:p-2 p-1 w-1/2">
-            <a href="csss collection\candle\index.html"> 
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://i.pinimg.com/564x/bf/cd/de/bfcdde5c0105415d39703016f9d4d453.jpg">
-            </a>
-        </div>
-          <div class="md:p-2 p-1 w-1/2">
-            <a href="csss collection\clock\index.html"> 
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://i.pinimg.com/564x/db/57/33/db5733bb2a80750bbd9723ec7d8673e5.jpg">
-             </a>
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-</section>
-<!--part3-->
-<section class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-wrap -m-4">
-        <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-          <div class="h-full text-center">
-            <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-            <p class="leading-relaxed"style="color:black;">Study Space’s music has made such a difference in my focus. The calming tunes and beautiful images create the perfect atmosphere for studying, helping me stay relaxed and productive.</p>
-            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">ALICE</h2>
-           
-          </div>
-        </div>
-        <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-          <div class="h-full text-center">
-            <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://plus.unsplash.com/premium_photo-1682095477296-f0d4cd2b3f93?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fGh1bWFuJTIwcHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D">
-            <p class="leading-relaxed"style="color:black;">I’ve tried many study tools, but nothing beats Study Space’s calming music and relaxing visuals. It’s now my go-to for creating a peaceful study environment!</p>
-            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">ROSE</h2>
-            
-          </div>
-        </div>
-        <div class="lg:w-1/3 lg:mb-0 p-4">
-          <div class="h-full text-center">
-            <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://plus.unsplash.com/premium_photo-1706429674214-09686c64c6a6?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fGh1bWFuJTIwcHJvZmlsZSUyMHBpY3R1cmUlMjBtZW58ZW58MHx8MHx8fDA%3D">
-            <p class="leading-relaxed"style="color:black;">Study Space’s music has made such a difference in my focus. The calming tunes and beautiful images create the perfect atmosphere for studying, helping me stay relaxed and productive.</p>
-            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">SAM</h2>
-            
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!--PART4-->
-<hr>
-<footer class="text-gray-600 body-font">
-    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <span class="ml-3 text-xl">StudySpace</span>
-      </a>
-      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 StudySpace —
-        <a href="https://twitter.com/AmritRout73?t=RbJFwvU0rP8nK4KVhZqpLg&s=09" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@StudySpace</a>
+    <section id="about" class="main-section" data-scroll-section style="width: 80%; max-width: 800px; margin: 0 auto; padding: 20px;">
+      <h2 class="title-section" data-scroll data-scroll-speed="1">About Us</h2>
+      <p class="subtitle-section" data-scroll data-scroll-speed="2">
+        Welcome to <strong>StudySpace</strong>! We are dedicated to creating the perfect environment for your study sessions. Here, you can immerse yourself in a serene atmosphere, enhanced by calming lo-fi music in the background. Our platform features a variety of simple animations designed to keep you company as you focus on your work.
       </p>
+      <p class="subtitle-section" data-scroll data-scroll-speed="2">
+        Stay tuned, as we’re continually developing new features to enrich your studying experience. Join us on this journey to transform the way you study!
+      </p>
+      <p class="subtitle-section" data-scroll data-scroll-speed="2">
+        <h1>Study Space Poem</h1>
+        <br>
+        Beneath soft lights, where silence sings,<br>
+        A world of focus, Study Space brings.<br>
+        The hum of lofi, sweet and slow,<br>
+        Helps minds to wander, helps them grow.<br><br>
+
+        A desk, a chair, your thoughts unfold,<br>
+        In this quiet refuge, stories told.<br>
+        With every task, with every line,<br>
+        You craft a future, bright and fine.<br><br>
+
+        Gentle animations float on by,<br>
+        As time slips softly, you won’t ask why.<br>
+        They keep you company, still and true,<br>
+        As you push through all you need to do.<br><br>
+
+        A place for dreams, a place for peace,<br>
+        Where goals are met and doubts decrease.<br>
+        Stay with us here, and find your grace,<br>
+        In the calm embrace of Study Space.<br><br>
+
+        And as new features come your way,<br>
+        We’ll grow together, day by day.<br>
+        So join the journey, set your pace,<br>
+        Discover your path in Study Space.<br>
+      </p>
+    </section>
+  
+    <section id="case-studies" class="main-section" data-scroll-section>
+      <h2 class="title-section" data-scroll data-scroll-speed="1">Explore</h2>
+      <p class="subtitle-section" data-scroll data-scroll-speed="2">Explore our latest animations.</p>
+      <div class="centerer">
+        <div class="wrap">
+          <a class="btn-1" href="csss_collection/bowl/index.html">Bowl</a>
+          <a class="btn-1" href="csss_collection/candle/index.html">Candle</a>
+          <a class="btn-1" href="csss_collection/cloud/index.html">Cloud</a>
+          <a class="btn-1" href="csss_collection/dot/index.html">Dot</a>
+          <a class="btn-1" href="csss_collection/failling star/index.html">Failling Star</a>
+          
+        </div>
+        <div class="wrap">
+          <a class="btn-1" href="csss_collection/glass/index.html">Glass</a>
+          <a class="btn-1" href="csss_collection/lamp/index.html">Lamp</a>
+          <a class="btn-1" href="csss_collection/physics/index.html">Physics</a>
+          <a class="btn-1" href="csss_collection/rain/index.html">Rain</a>
+          <a class="btn-1" href="csss_collection/space/index.html">Space</a>
+        </div>
+      </div>
       
-    </div>
-  </footer>
+      
+    </section>
+
+    <section id="team" class="main-section" data-scroll-section>
+      <h2 class="title-section" data-scroll data-scroll-speed="1">Team GrassHunter</h2>
+      <p class="subtitle-section" data-scroll data-scroll-speed="2" class="team">Crafted by two roommates beneath the glow of the moon.</p>
+    
+      <div class="team-member" data-scroll data-scroll-speed="2" style="text-align: center; margin-bottom: 2rem;">
+        <img src="/img/sammy.jpeg" alt="Team Member" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid #2f2f2f;">
+        <h3><a href="https://github.com/venomusblood568">Sammy</a></h3>
+        <p>Designer</p>
+      </div>
+    
+      <div class="team-member" data-scroll data-scroll-speed="3" style="text-align: center; margin-bottom: 2rem;">
+        <img src="/img/ammy.jpeg" alt="Team Member" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid #2f2f2f;">
+        <h3><a href="https://github.com/amritrout">Ammy</a></h3>
+        <p>Developer</p>
+      </div>
+    </section>
+    
+
+    <section id="contact" class="main-section" data-scroll-section>
+      <h2 class="title-section" data-scroll data-scroll-speed="1">Contact Us</h2>
+      <p class="subtitle-section" data-scroll data-scroll-speed="2">We would love to hear from you!</p>
+      <form id="form" class="topBefore">
+          
+            <input id="name" type="text" placeholder="NAME">
+            <input id="email" type="text" placeholder="E-MAIL">
+            <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+        <input id="submit" type="submit" value="GO!">
+        
+      </form>
+    </section>
+
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
-</header>
+</html>
